@@ -1,0 +1,79 @@
+,Results.reception.time,MD5.hash.of.participant.s.IP.address,Controller.name,Order.number.of.item,Inner.element.number,Label,Latin.Square.Group,PennElementName,PennElementType,Parameter,Value,EventTime,Comments
+4,1701186129,7f8f5755484c97f78ee0e7df7fa48c43,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701184767816,y;n
+5,1701186129,7f8f5755484c97f78ee0e7df7fa48c43,PennController,1,0,background,NULL,age-input,TextInput,Value,19,1701184964649,NULL
+6,1701186129,7f8f5755484c97f78ee0e7df7fa48c43,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,Spanish is my first language and I learned it when I started speaking at about age one and a half. I learned English at school so I learned that at about 4 years old. I speak English at school and Spanish at home.,1701184964650,NULL
+7,1701186129,7f8f5755484c97f78ee0e7df7fa48c43,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,I speak native Spanish from Mexico but I'm not exactly sure what dialect I speak.,1701184964650,NULL
+8,1701186129,7f8f5755484c97f78ee0e7df7fa48c43,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,I speak American English that I learned in the US at school.,1701184964650,NULL
+219,1701186129,7f8f5755484c97f78ee0e7df7fa48c43,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,,1701186129193,NULL
+226,1701236260,12ae168863a6ea35b65b0f8328b1c819,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701235857111,y;n
+227,1701236260,12ae168863a6ea35b65b0f8328b1c819,PennController,1,0,background,NULL,age-input,TextInput,Value,21,1701235890182,NULL
+228,1701236260,12ae168863a6ea35b65b0f8328b1c819,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,Learned Spanish at home since a kid,1701235890183,NULL
+229,1701236260,12ae168863a6ea35b65b0f8328b1c819,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Central Mexico,1701235890183,NULL
+230,1701236260,12ae168863a6ea35b65b0f8328b1c819,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,Western American,1701235890183,NULL
+441,1701236260,12ae168863a6ea35b65b0f8328b1c819,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,The responses between 1 or 2 varied depending on whether I approached it as something I would say that other 'spanglish' speakers would understand%2C and then secondly what made sense grammatically as feminine or masculine,1701236258149,NULL
+448,1701275495,0101c0e9e8539b00c814c9227c4d008c,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701274865437,y;n
+449,1701275495,0101c0e9e8539b00c814c9227c4d008c,PennController,1,0,background,NULL,age-input,TextInput,Value,24,1701275025911,NULL
+450,1701275495,0101c0e9e8539b00c814c9227c4d008c,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,I was born and raised in Puerto Rico%2C so Spanish is my native language. I’ve been learning English since I was 3-4 from media and school. Both languages are spoken at home%2C at school and with friends. ,1701275025913,NULL
+451,1701275495,0101c0e9e8539b00c814c9227c4d008c,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Puerto Rican,1701275025913,NULL
+452,1701275495,0101c0e9e8539b00c814c9227c4d008c,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,American,1701275025914,NULL
+663,1701275495,0101c0e9e8539b00c814c9227c4d008c,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,Definitely made me think for a bit haha. I’ve gotten so used to saying stuff that seeing it written made me take a step back and actually think about it. ,1701275493132,NULL
+670,1701399149,046234a8b4f1d0f2656c160859b3c4ae,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701398367669,y;n
+671,1701399149,046234a8b4f1d0f2656c160859b3c4ae,PennController,1,0,background,NULL,age-input,TextInput,Value,24,1701398675306,NULL
+672,1701399149,046234a8b4f1d0f2656c160859b3c4ae,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,English native speaker and started learning Spanish around 11.I now live in a Spanish-only speaking household (in-laws only speak Spanish) and only recently started considering myself fluent in Spanish. ,1701398675309,NULL
+673,1701399149,046234a8b4f1d0f2656c160859b3c4ae,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Neutral dialect with /some Venezuelan influence. I have an accent. ,1701398675309,NULL
+674,1701399149,046234a8b4f1d0f2656c160859b3c4ae,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,Neutral US%2C%2C native speaker. I am from Texas but do not have an accent. I went to school on the east coast and have some Delaware valley accent sometimes on the vowels namely O  ,1701398675310,NULL
+885,1701399149,046234a8b4f1d0f2656c160859b3c4ae,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,Not very mobile friendly ,1701399148921,NULL
+892,1701400101,837eea88fb85f59ff3e8d86b8f1321bd,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701399617498,y;n
+893,1701400101,837eea88fb85f59ff3e8d86b8f1321bd,PennController,1,0,background,NULL,age-input,TextInput,Value,25,1701399812015,NULL
+894,1701400101,837eea88fb85f59ff3e8d86b8f1321bd,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,My native tongue is spanish%2C I'm mexican born and raised. I learned english by watching tv and listening to music. Social media helped.,1701399812020,NULL
+895,1701400101,837eea88fb85f59ff3e8d86b8f1321bd,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Mexican (north),1701399812021,NULL
+896,1701400101,837eea88fb85f59ff3e8d86b8f1321bd,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,General american,1701399812021,NULL
+1107,1701400101,837eea88fb85f59ff3e8d86b8f1321bd,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,,1701400101970,NULL
+1114,1701402468,24a9f5a9621956e756cf33f96f7a7256,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701402133852,y;n
+1115,1701402468,24a9f5a9621956e756cf33f96f7a7256,PennController,1,0,background,NULL,age-input,TextInput,Value,25,1701402194090,NULL
+1116,1701402468,24a9f5a9621956e756cf33f96f7a7256,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,spanish at home with mom. english everywhere else,1701402194096,NULL
+1117,1701402468,24a9f5a9621956e756cf33f96f7a7256,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,northern mexico,1701402194097,NULL
+1118,1701402468,24a9f5a9621956e756cf33f96f7a7256,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,southern californian,1701402194097,NULL
+1329,1701402468,24a9f5a9621956e756cf33f96f7a7256,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,,1701402467376,NULL
+1336,1701402990,a4fa8a67961aaa9a30fcc7c674f910eb,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701401999281,y;n
+1337,1701402990,a4fa8a67961aaa9a30fcc7c674f910eb,PennController,1,0,background,NULL,age-input,TextInput,Value,22,1701402419109,NULL
+1338,1701402990,a4fa8a67961aaa9a30fcc7c674f910eb,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,I have always spoken Spanish at home and I learned English by watching PBS and other media.I speak Spanish at home and whenever I am with my family whether it is at home or not. I speak English in school and with most of my friends. My phone and other devices are set to English and I am most comfortable in English when it comes to professional environments. I grew up watching movies dubbed in Spanish and I still watch those movies in Spanish. I am very proficient in Spanish because I go to Mexico often and keep in touch with my cousins and other family members. I think my only noticeable weakness in Spanish is my academic or professional language skills are not where they are in English.,1701402419114,NULL
+1339,1701402990,a4fa8a67961aaa9a30fcc7c674f910eb,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Mexican,1701402419114,NULL
+1340,1701402990,a4fa8a67961aaa9a30fcc7c674f910eb,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,American,1701402419114,NULL
+1551,1701402990,a4fa8a67961aaa9a30fcc7c674f910eb,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,,1701402989808,NULL
+1558,1701403593,d3412572435a05abb67eb68b673a1db2,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701402500250,y;n
+1559,1701403593,d3412572435a05abb67eb68b673a1db2,PennController,1,0,background,NULL,age-input,TextInput,Value,22,1701402832163,NULL
+1560,1701403593,d3412572435a05abb67eb68b673a1db2,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,English is my first language and the language in which I primarily work and communicate. I learned Spanish during high school%2C at age 14. I graduated%2C in part%2C with a major in Spanish. Now%2C I read the news in Spanish%2C daily%2C but do not regularly speak with anyone.,1701402832165,NULL
+1561,1701403593,d3412572435a05abb67eb68b673a1db2,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Mexican Spanish,1701402832165,NULL
+1562,1701403593,d3412572435a05abb67eb68b673a1db2,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,American English (California),1701402832165,NULL
+1773,1701403593,d3412572435a05abb67eb68b673a1db2,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,A couple of the blanks were followed by one of the two answers (something like she has ojos __ azules),1701403593341,NULL
+1780,1701429280,3d7b21c61578b99b3b76cd4e915b79fb,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701428770344,y;n
+1781,1701429280,3d7b21c61578b99b3b76cd4e915b79fb,PennController,1,0,background,NULL,age-input,TextInput,Value,22,1701428837474,NULL
+1782,1701429280,3d7b21c61578b99b3b76cd4e915b79fb,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,3 for Spanish which i learned from my grandmother at home and English at the same age but more at school. Though I did go to a bilingual elementary school. ,1701428837477,NULL
+1783,1701429280,3d7b21c61578b99b3b76cd4e915b79fb,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Mexican,1701428837477,NULL
+1784,1701429280,3d7b21c61578b99b3b76cd4e915b79fb,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,American,1701428837477,NULL
+1995,1701429280,3d7b21c61578b99b3b76cd4e915b79fb,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,It would be nice to be able to go back to change an answer ,1701429279506,NULL
+2038,1701460034,cf6b190ba495ee9d25171886ce037b8d,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701459559026,y;n
+2039,1701460034,cf6b190ba495ee9d25171886ce037b8d,PennController,1,0,background,NULL,age-input,TextInput,Value,25,1701459648777,NULL
+2040,1701460034,cf6b190ba495ee9d25171886ce037b8d,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,Born in Mexico started speaking Spanish as a child and learned English at school when I was in first grade. However it was never very intense until I reached 5th grade.,1701459648781,NULL
+2041,1701460034,cf6b190ba495ee9d25171886ce037b8d,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Mexican ,1701459648781,NULL
+2042,1701460034,cf6b190ba495ee9d25171886ce037b8d,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,American,1701459648782,NULL
+2253,1701460034,cf6b190ba495ee9d25171886ce037b8d,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,,1701460033689,NULL
+2260,1701489796,57fd1c60175cf1856bb0f79c5042f362,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701488878727,y;n
+2261,1701489796,57fd1c60175cf1856bb0f79c5042f362,PennController,1,0,background,NULL,age-input,TextInput,Value,20,1701489503584,NULL
+2262,1701489796,57fd1c60175cf1856bb0f79c5042f362,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,I grew up in Spain%2C from a Spanish family%2C but I attended bilingual schools until I was 16%2C when I moved to an international school in Norway (English-speaking only). For the past three and a half years I have mostly spoken English on a daily basis. I exclusively use Spanish when communicating with my family or friends from Spain%2C and I exclusively use English in my education and when communicating with friends here at Cornell or from my school in Norway. Due to this%2C most of my social interactions happen in English (and it has been so for a few years).,1701489503585,NULL
+2263,1701489796,57fd1c60175cf1856bb0f79c5042f362,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Central Spain/Madrid standard Castilian%2C culto,1701489503585,NULL
+2264,1701489796,57fd1c60175cf1856bb0f79c5042f362,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,Standard American English%2C with few phonetic features of Spanish,1701489503585,NULL
+2475,1701489796,57fd1c60175cf1856bb0f79c5042f362,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,,1701489795511,NULL
+2482,1701556840,c1e9975e539b92953462533112022eb1,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701556404089,y;n
+2483,1701556840,c1e9975e539b92953462533112022eb1,PennController,1,0,background,NULL,age-input,TextInput,Value,20,1701556540657,NULL
+2484,1701556840,c1e9975e539b92953462533112022eb1,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,Spanish was my first language and is the language I speak at home at all times. I learned English at the age of 4 and have used it for the entirety of my education and in most public places.,1701556540658,NULL
+2485,1701556840,c1e9975e539b92953462533112022eb1,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Spanish from Mexico (primarily from the state of Puebla),1701556540658,NULL
+2486,1701556840,c1e9975e539b92953462533112022eb1,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,English from the United States,1701556540658,NULL
+2697,1701556840,c1e9975e539b92953462533112022eb1,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,,1701556839866,NULL
+2704,1701561230,8180a1ef16965e71922589de27d56118,PennController,1,0,background,NULL,BL-selector,Selector,Select,y,1701560551080,y;n
+2705,1701561230,8180a1ef16965e71922589de27d56118,PennController,1,0,background,NULL,age-input,TextInput,Value,19,1701560786518,NULL
+2706,1701561230,8180a1ef16965e71922589de27d56118,PennController,1,0,background,NULL,BL-profile-input,TextInput,Value,I was born and raised%2C for the most part%2C in Colombia%2C so Spanish is my native language and I've used it daily for most of my life. I lived in the US for a little over three years as a kid%2C and I learned to read and write in English before doing so in Spanish. As I'm now studying in the US%2C I speak English quite often.,1701560786518,NULL
+2707,1701561230,8180a1ef16965e71922589de27d56118,PennController,1,0,background,NULL,Sp-dialect-input,TextInput,Value,Español bogotano,1701560786518,NULL
+2708,1701561230,8180a1ef16965e71922589de27d56118,PennController,1,0,background,NULL,Eng-dialect-input,TextInput,Value,Standard American English,1701560786518,NULL
+2919,1701561230,8180a1ef16965e71922589de27d56118,PennController,72,0,feedback,NULL,feedback-input,TextInput,Value,Neither gris nor grises should have accents. Also%2C one of the prompts has the answer in it: Ella tiene los ojos ___ azules. ,1701561235994,NULL
