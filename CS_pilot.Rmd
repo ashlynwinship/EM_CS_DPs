@@ -1,0 +1,198 @@
+---
+title: "Pilot data processing"
+output: html_document
+date: "2023-11-24"
+---
+
+**Description:**
+Processing pilot data for CS within full DPs experiment - graphs, chi-squared test
+
+(Project for Experimental Methods)
+
+```{r setup, echo=FALSE}
+
+#install.packages(c('quantmod','ff','foreign','R.matlab'),dependency=T)
+#install.packages("ggplot2")
+suppressPackageStartupMessages(library(tidyverse))
+library(MASS)
+library(ggplot2)
+library(tidyverse)
+library(rstatix)
+library(ggpubr)
+
+#Instructions for me:
+#1. Run data through cleaning script (CS_clean_data.Rmd). 
+#2. Filter it (experimental-trial, Question; make sure everyone answered YES for BL-input). Make sure you have the correct # of responses (32xnumber of participants). 
+#3. Copy only filtered values onto new spreadsheets (filtered responses, participant info (BL-input, dialects, BL-profile, feedback)), download as CSVs.
+#4. Load filtered responses into data1 and participant info into participant.info 
+
+data1 <- read_csv('pilot-filtered.csv',show_col_types = FALSE)
+
+sum <- data1 %>%
+  group_by(target_type) %>%
+  summarise( 
+    mean=mean(Whether.or.not.answer.was.correct..NULL.if.N.A.),
+    sd=sd(Whether.or.not.answer.was.correct..NULL.if.N.A.)
+  )
+
+#load participant-specific info for reference - demographics, feedback
+participant.info <- read_csv('pilot-participant-info.csv',show_col_types = FALSE)
+
+#pull out specific info - age, BL identity (make sure all are yes!!), language use (dialects, daily use), feedback
+participant.BL.check <- participant.info %>%
+  filter(PennElementName=="BL-selector", Value=="y") %>%
+  dplyr::select(MD5.hash.of.participant.s.IP.address, PennElementName, Value)
+
+participant.ages <- participant.info %>% 
+  filter(PennElementName=="age-input") %>%
+  dplyr::select(MD5.hash.of.participant.s.IP.address, PennElementName, Value)
+
+participant.languages <- participant.info %>% 
+  filter(PennElementName %in% c("Sp-dialect-input", "Eng-dialect-input", "BL-profile-input")) %>%
+  dplyr::select(MD5.hash.of.participant.s.IP.address, PennElementName, Value)
+
+participant.feedback <- participant.info %>% 
+  filter(PennElementName=="feedback") %>%
+  dplyr::select(MD5.hash.of.participant.s.IP.address, PennElementName, Value)
+
+#group mean ratings for each sentence type by participant
+#get vector of overall mean by participant first (closer to 0 = more MASC, closer to 1 = more FEM)
+overall.means.by.participant <- data1 %>%
+  group_by(MD5.hash.of.participant.s.IP.address) %>%
+  summarize(mean.rating = mean(Whether.or.not.answer.was.correct..NULL.if.N.A.))
+overall.mean.v <- pull(overall.means.by.participant, mean.rating)
+#now get means by participant for each group
+means.by.participant <- data1 %>%
+  group_by(target_type, MD5.hash.of.participant.s.IP.address) %>%
+  summarize(mean.rating = mean(Whether.or.not.answer.was.correct..NULL.if.N.A.)) %>%
+  tidyr::spread(target_type, mean.rating)
+#add overall means to the above df
+means.by.participant <- means.by.participant %>%
+    mutate(overall_mean=overall.mean.v)
+print("Mean response by participant (1=FEM, 0=MASC):")
+means.by.participant
+
+#Pull correct (FEM) and incorrect (MASC) counts for each sentence type A, B, C, D
+counts <- data1 %>%
+  count(target_type, Whether.or.not.answer.was.correct..NULL.if.N.A.)
+
+#Pull counts of FEM, MASC, and totals from counts df
+FEM_n_A=pull(counts[2,3])
+FEM_n_B=pull(counts[4,3])
+FEM_n_C=pull(counts[6,3])
+FEM_n_D=pull(counts[8,3])
+FEM_n_vector<-c(FEM_n_A, FEM_n_B, FEM_n_C, FEM_n_D)
+MASC_n_A=pull(counts[1,3])
+MASC_n_B=pull(counts[3,3])
+MASC_n_C=pull(counts[5,3])
+MASC_n_D=pull(counts[7,3])
+MASC_n_vector<-c(MASC_n_A, MASC_n_B, MASC_n_C, MASC_n_D)
+total_A=FEM_n_A+MASC_n_A
+total_B=FEM_n_B+MASC_n_B
+total_C=FEM_n_C+MASC_n_C
+total_D=FEM_n_D+MASC_n_D
+totals<-c(total_A, total_B, total_C, total_D)
+#check ^: should all be the same value!
+
+#Get ratio (percent) of FEM:total answers by sentence type
+FEM_A=FEM_n_A/total_A
+FEM_B=FEM_n_B/total_B
+FEM_C=FEM_n_C/total_C
+FEM_D=FEM_n_D/total_D
+FEM_ratio_vector<-c(FEM_A, FEM_B, FEM_C, FEM_D)
+
+#Get adjusted binomial CIs (small sample size in pilot)
+#Adjusted binomial CI for A
+p.hatA <- round(((FEM_n_A+2)/(total_A+4)),digits=2)
+ci.lowerA <- p.hatA - 1.96*sqrt((1/total_A)*p.hatA*(1-p.hatA))
+ci.upperA <- p.hatA + 1.96*sqrt((1/total_A)*p.hatA*(1-p.hatA))
+lowerA <- round(ci.lowerA,digits=2)
+upperA <- round(ci.upperA,digits=2)
+
+#Adjusted binomial CI for B
+p.hatB <- round(((FEM_n_B+2)/(total_B+4)),digits=2)
+ci.lowerB <- p.hatB - 1.96*sqrt((1/total_B)*p.hatB*(1-p.hatB))
+ci.upperB <- p.hatB + 1.96*sqrt((1/total_B)*p.hatB*(1-p.hatB))
+lowerB <- round(ci.lowerB,digits=2)
+upperB <- round(ci.upperB,digits=2)
+
+#Adjusted binomial CI for C 
+p.hatC <- round(((FEM_n_C+2)/(total_C+4)),digits=2)
+ci.lowerC <- p.hatC - 1.96*sqrt((1/total_C)*p.hatA*(1-p.hatC))
+ci.upperC <- p.hatC + 1.96*sqrt((1/total_C)*p.hatA*(1-p.hatC))
+lowerC <- round(ci.lowerC,digits=2)
+upperC <- round(ci.upperC,digits=2)
+
+#Adjusted binomial CI for D
+p.hatD <- round(((FEM_n_D+2)/(total_D+4)),digits=2)
+ci.lowerD <- p.hatD - 1.96*sqrt((1/total_D)*p.hatD*(1-p.hatD))
+ci.upperD <- p.hatD + 1.96*sqrt((1/total_D)*p.hatD*(1-p.hatD))
+lowerD <- round(ci.lowerD,digits=2)
+upperD <- round(ci.upperD,digits=2)
+
+lower_CIs <- c(lowerA, lowerB, lowerC, lowerD)
+upper_CIs <- c(upperA, upperB, upperC, upperD)
+
+#Create new data frame with relevant info by sentence type
+data2 <- data.frame(sentence_type = c("A", "B", "C", "D"),
+                    FEM_responses=FEM_n_vector,
+                    total_responses=totals,
+                    FEM_ratio=FEM_ratio_vector,
+                    lowerCI=lower_CIs,
+                    upperCI=upper_CIs)
+
+#Plot FEM ratio data
+plot1 <- ggplot(data = data2, aes(x=sentence_type, y=FEM_ratio, fill=sentence_type)) +
+  ggtitle("%FEM selection by test sentence type") +
+  labs(x="sentence type", y="%FEM") +
+  ylim(0,1.0) +
+  geom_bar(stat="identity") +
+  scale_fill_manual(values = c("red", "green", "blue", "purple") ) +
+  theme(legend.position="none") +
+  geom_errorbar(aes(ymin=lowerCI, ymax=upperCI))
+
+print(plot1)
+
+#Create data frame to plot MASC & FEM counts side by side:
+counts2 <- data.frame(
+  sentence_type<-c("A", "B", "C", "D", "A", "B", "C", "D"),
+  response_type<-c("F", "F", "F", "F", "M", "M", "M", "M"),
+  n<-c(FEM_n_A, FEM_n_B, FEM_n_C, FEM_n_D, MASC_n_A, MASC_n_B, MASC_n_C, MASC_n_D)
+)
+
+plot2 <- ggplot(counts2) +
+  geom_bar(aes(x=sentence_type, y=n, fill=response_type),
+           position = "dodge",
+           stat = "identity") +
+  geom_text(position=position_dodge(width=0.9), aes(x=sentence_type, y=n, label=n, fill=response_type, vjust=0)) +
+  ggtitle("Number of FEM & MASC responses by sentence type") +
+  labs(x="sentence type", fill="gender")
+
+print(plot2)
+
+#check for significant differences between target type:
+#one-way repeated measures ANOVA
+
+means.by.participant<-means.by.participant %>%
+  select(MD5.hash.of.participant.s.IP.address, A, B, C, D) %>%
+  gather(key = "target_type", value = "mean", A, B, C, D) %>%
+  convert_as_factor(MD5.hash.of.participant.s.IP.address, target_type)
+
+my.aov<-anova_test(data=means.by.participant, dv=mean, wid=MD5.hash.of.participant.s.IP.address, within=target_type)
+print(my.aov)
+summary(my.aov)
+
+#not significant; pairwise t-tests not needed
+
+#Ask Helena - how to see if sentences of Type A resulted in FEM more often than chance when the data is not independent; can't run binomial test (VK 2016)
+bysubj <- aggregate(mean ~ MD5.hash.of.participant.s.IP.address +
+  target_type,
+mean,
+data = means.by.participant
+)
+m2 <- lm(mean ~ target_type, bysubj)
+summary(m2)
+
+```
+
+
